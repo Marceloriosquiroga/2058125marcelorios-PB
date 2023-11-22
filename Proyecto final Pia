@@ -1,0 +1,86 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+struct Articulo {
+    string nombre;
+    int cantidad;
+    float precioUnitario;
+};
+
+struct Orden {
+    string razonSocial;
+    int numeroTicket;
+    string nombreVendedor;
+    string fecha;
+    vector<Articulo> articulos;
+    float descuento;
+    float propina;
+    float impuesto;
+    float total;
+    bool cancelada;
+};
+
+vector<Orden> ordenes;
+
+void altaOrden() {
+    
+}
+
+void bajaOrden() {
+    
+}
+
+void listarOrdenes() {
+    
+}
+
+void limpiarPantalla() {
+    
+}
+
+void guardarArchivo() {
+    
+}
+
+void mostrarMenu() {
+
+}
+
+int main() {
+    char opcion;
+    do {
+        mostrarMenu();
+        cout << "Ingrese la opcion deseada: ";
+        cin >> opcion;
+        cin.ignore(); // Limpiar el buffer de entrada
+
+        switch (opcion) {
+            case '1':
+                altaOrden();
+                break;
+            case '2':
+                bajaOrden();
+                break;
+            case '3':
+                listarOrdenes();
+                break;
+            case '4':
+                limpiarPantalla();
+                break;
+            case '5':
+                guardarArchivo();
+                break;
+            case '6':
+                // Salir del programa
+                break;
+            default:
+                cout << "Opcion no valida. Intente de nuevo." << endl;
+        }
+    } while (opcion != '6');
+
+    return 0;
+}
